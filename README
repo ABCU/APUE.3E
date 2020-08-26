@@ -8,3 +8,19 @@ Please direct questions, suggestions, and bug reports to sar@apuebook.com.
 
 Steve Rago
 January 2013
+
+---
+Dev Env setting with OS X 10.15.6
+
+Q1: for some reason Apple removed /usr/local/include from system at the beginning about version 10.14.
+when we excuted 'make' will occur apue.h missing error
+
+A1: 
+```shell
+# by install gcc to remake dir 
+$ brew install gcc
+  ... 
+
+# then create a soft link from /include/aupe.h
+$ ln -s /Users/king/OpenSource/unix/apue.3e/include/apue.h /usr/local/include/apue.h
+```
